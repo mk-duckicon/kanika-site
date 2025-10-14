@@ -3,144 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KANIKA — Compliance‑First AI for Custodian Data</title>
-  <meta name="description" content="KANIKA transforms natural‑language requests into deterministic, auditable actions across custodian data.">
-  <meta property="og:title" content="KANIKA — Compliance‑First AI for Custodian Data">
-  <meta property="og:description" content="Natural language → deterministic queries → immutable audit trails.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#0f172a">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>KANIKA</title>
+  <meta name="description" content="KANIKA — Compliance-First AI for Custodian Data">
+  <meta name="theme-color" content="#0b1020">
   <link rel="icon" type="image/png" href="/favicon.png">
   <style>
-    html, body { height: 100%; background: #0b1020; color: #e5e7eb; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-    .glass { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(8px); }
-    .accent { color: #8bafff; }
-    .btn-primary { background:#8bafff; color:#0b1020; }
-    .btn-primary:hover { background:#a7c0ff; }
-    .badge { background: rgba(139,175,255,0.14); color:#cfe0ff; border: 1px solid rgba(139,175,255,0.35) }
-    .footer a { color: #9fb6ff; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #0b1020;
+      color: #e5e7eb;
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    a {
+      color: #8bafff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
-<body class="min-h-screen flex flex-col">
-  <header class="w-full">
-    <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <img src="/logo.png" alt="KANIKA logo" class="w-10 h-10 rounded-lg">
-        <span class="text-xl font-semibold tracking-tight">KANIKA</span>
-      </div>
-      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
-        <a href="#about" class="hover:text-white">About</a>
-        <a href="#features" class="hover:text-white">Features</a>
-        <a href="#contact" class="hover:text-white">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="flex-1">
-    <!-- Hero -->
-    <section class="py-20 md:py-28">
-      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <div class="inline-flex items-center gap-2 badge px-3 py-1 rounded-full text-xs font-medium mb-4">
-            <span>Stealth — Early Access</span>
-          </div>
-          <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-            Compliance‑first AI for <span class="accent">custodian data</span>.
-          </h1>
-          <p class="mt-5 text-slate-300 text-lg leading-relaxed">
-            KANIKA transforms natural‑language requests into <span class="font-semibold text-white">deterministic, auditable queries</span> across Schwab, Fidelity, Pershing, SEI and more — creating immutable logs and regulator‑ready reports.
-          </p>
-          <div class="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="mailto:info@getkanika.com?subject=KANIKA%20—%20Early%20Access" class="btn-primary px-5 py-3 rounded-xl font-semibold text-center">Request Early Access</a>
-            <a href="#features" class="px-5 py-3 rounded-xl font-semibold glass text-center">How it works</a>
-          </div>
-          <div class="mt-4 text-xs text-slate-400">Prefer email? <a class="underline decoration-dotted" href="mailto:info@getkanika.com">info@getkanika.com</a></div>
-        </div>
-        <div class="glass rounded-2xl p-6 md:p-8">
-          <div class="text-sm text-slate-300 mb-3">Architecture (simplified)</div>
-          <div class="space-y-3">
-            <div class="grid grid-cols-5 gap-2">
-              <div class="col-span-5 glass rounded-lg p-3 border border-white/10">
-                <div class="text-xs font-semibold text-slate-200">NL → Deterministic Query</div>
-                <div class="text-xs text-slate-400">Schema guardrails • RBAC • Entitlements</div>
-              </div>
-              <div class="col-span-5 glass rounded-lg p-3 border border-white/10">
-                <div class="text-xs font-semibold text-slate-200">Cross‑Custodian Normalization</div>
-                <div class="text-xs text-slate-400">Positions • Transactions • Tax lots</div>
-              </div>
-              <div class="col-span-5 glass rounded-lg p-3 border border-white/10">
-                <div class="text-xs font-semibold text-slate-200">Immutable Audit Ledger</div>
-                <div class="text-xs text-slate-400">Inputs • SQL • Outputs • Hashes</div>
-              </div>
-              <div class="col-span-5 glass rounded-lg p-3 border border-white/10">
-                <div class="text-xs font-semibold text-slate-200">Regulatory Templates</div>
-                <div class="text-xs text-slate-400">Reg BI • Concentration • Best‑ex</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features -->
-    <section id="features" class="py-10">
-      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
-        <div class="glass rounded-2xl p-6 border border-white/10">
-          <div class="text-sm uppercase tracking-wide text-slate-400">Deterministic</div>
-          <h3 class="mt-1 font-semibold">No‑hallucination outputs</h3>
-          <p class="mt-2 text-slate-300 text-sm">Natural‑language requests resolve to validated queries checked against custodian schemas.</p>
-        </div>
-        <div class="glass rounded-2xl p-6 border border-white/10">
-          <div class="text-sm uppercase tracking-wide text-slate-400">Cross‑custodian</div>
-          <h3 class="mt-1 font-semibold">One layer, many feeds</h3>
-          <p class="mt-2 text-slate-300 text-sm">Normalize data across Schwab, Fidelity, Pershing, SEI and data pipes like BridgeFT.</p>
-        </div>
-        <div class="glass rounded-2xl p-6 border border-white/10">
-          <div class="text-sm uppercase tracking-wide text-slate-400">Audit‑ready</div>
-          <h3 class="mt-1 font-semibold">Immutable trail</h3>
-          <p class="mt-2 text-slate-300 text-sm">Every request, query, and output is logged for regulator‑ready evidence.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-10">
-      <div class="max-w-3xl mx-auto px-6 text-slate-300 leading-relaxed">
-        <h2 class="text-2xl font-semibold">About KANIKA</h2>
-        <p class="mt-3">
-          We build the compliance‑first AI layer for wealth platforms. Start with safer, faster access to custodian data; expand into advisor productivity and client transparency. If you lead an RIA network, TAMP, or custodian platform and want to explore a pilot, we’d love to connect.
-        </p>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-12">
-      <div class="max-w-2xl mx-auto px-6 glass rounded-2xl p-8 border border-white/10">
-        <h3 class="text-xl font-semibold">Get in touch</h3>
-        <p class="mt-2 text-slate-300">Email us at <a class="underline decoration-dotted" href="mailto:info@getkanika.com">info@getkanika.com</a>.</p>
-        <div class="mt-4">
-          <a href="mailto:info@getkanika.com?subject=KANIKA%20—%20Intro%20Call" class="btn-primary px-5 py-3 rounded-xl font-semibold inline-block">Email the founders</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer py-10">
-    <div class="max-w-6xl mx-auto px-6 text-sm text-slate-400 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
-      <div>© <span id="year"></span> KANIKA. All rights reserved.</div>
-      <div class="flex gap-4">
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<body>
+  <div>
+    <img src="/logo.png" alt="KANIKA logo" style="width:80px;height:80px;margin-bottom:20px;">
+    <h1>KANIKA</h1>
+    <p>For more information, reach out to <a href="mailto:info@getkanika.com">info@getkanika.com</a></p>
+  </div>
 </body>
 </html>
