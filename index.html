@@ -1,67 +1,259 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KANIKA</title>
-  <meta name="description" content="KANIKA — Compliance-First AI for Custodian Data">
-  <meta name="theme-color" content="#0b1020">
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      background: #0b1020;
-      color: #e5e7eb;
-      font-family: Inter, system-ui, -apple-system, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    a {
-      color: #8bafff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <div>
-    <h1>KANIKA</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanika</title>
 
-<h2>Deterministic AI Infrastructure for Regulated Wealth Platforms</h2>
+    <style>
+      :root {
+        --bg: #070a12;
+        --panel: rgba(255, 255, 255, 0.05);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.72);
+        --faint: rgba(255, 255, 255, 0.55);
+        --line: rgba(255, 255, 255, 0.12);
+        --accent: rgba(110, 168, 255, 0.95);
+      }
 
-<p>
-Audit-ready querying of custodian data — designed for platform, aggregator, and custodian deployment.
-</p>
+      * { box-sizing: border-box; }
 
-<p>
-Kanika is building deterministic AI infrastructure that enables audit-ready access to custodian data in regulated wealth environments.
-The system translates user intent into constrained, validated queries and automatically generates reproducible evidence and audit trails.
-</p>
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+          "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(1100px 700px at 20% 10%, rgba(110, 168, 255, 0.18), transparent 55%),
+          radial-gradient(900px 600px at 80% 30%, rgba(125, 255, 212, 0.10), transparent 60%),
+          var(--bg);
+        line-height: 1.5;
+      }
 
-<p>
-Most AI tools are probabilistic and ship with disclaimers, which makes them unsuitable for use inside compliance, operations, and exam-sensitive workflows.
-Kanika is designed as a system-level compliance and query layer — not a point solution for individual firms.
-</p>
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover { text-decoration: underline; }
 
-<p>
-Individual RIAs are used as the initial validation wedge to prove workflows in production.
-Long-term scale comes from platform and custodian deployment, where a single integration reaches hundreds or thousands of downstream advisors.
-</p>
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 64px 20px 56px;
+      }
 
-<p>
-Founded by a former asset manager and Chief Compliance Officer with firsthand experience through multiple SEC exams,
-including an AI-focused limited-scope exam.
-</p>
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 28px;
+      }
 
-<p>
-For more information: <a href="mailto:info@getkanika.com">info@getkanika.com</a>
-</p>
-  </div>
-</body>
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, rgba(110,168,255,0.95), rgba(125,255,212,0.75));
+        box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      }
+
+      .name {
+        font-size: 14px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .pill {
+        font-size: 12px;
+        color: var(--muted);
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.03);
+        padding: 8px 10px;
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(28px, 3.6vw, 44px);
+        letter-spacing: -0.02em;
+      }
+
+      .subhead {
+        margin: 0 0 18px;
+        font-size: clamp(16px, 2.1vw, 19px);
+        color: var(--muted);
+        max-width: 72ch;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 18px;
+        margin-top: 26px;
+      }
+
+      @media (max-width: 840px) {
+        .grid { grid-template-columns: 1fr; }
+        header { align-items: flex-start; }
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        border-radius: 16px;
+        padding: 18px 18px 16px;
+        box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+      }
+
+      .card h2 {
+        font-size: 14px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--faint);
+        margin: 0 0 10px;
+      }
+
+      .card p {
+        margin: 0 0 12px;
+        color: var(--muted);
+      }
+
+      .card p strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .list {
+        margin: 10px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .list li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        color: var(--muted);
+      }
+
+      .dot {
+        margin-top: 6px;
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.22);
+        flex: 0 0 auto;
+      }
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 12px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.04);
+        color: var(--text);
+        font-weight: 600;
+      }
+      .btn:hover { background: rgba(255,255,255,0.06); text-decoration: none; }
+
+      .meta {
+        font-size: 13px;
+        color: var(--faint);
+        margin-top: 10px;
+      }
+
+      footer {
+        margin-top: 30px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        color: var(--faint);
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="name">KANIKA</div>
+        </div>
+        <div class="pill">Early-stage • Details available on request</div>
+      </header>
+
+      <h1>Deterministic AI Infrastructure for Regulated Wealth Platforms</h1>
+      <p class="subhead">
+        Audit-ready querying of custodian data — designed for platform, aggregator, and custodian deployment.
+      </p>
+
+      <div class="grid">
+        <section class="card">
+          <h2>What it is</h2>
+          <p>
+            Kanika is building a <strong>system-level compliance and query layer</strong> that translates intent into
+            constrained, validated queries and automatically produces reproducible evidence and audit trails.
+          </p>
+          <p>
+            This enables AI-assisted workflows inside compliance, operations, and exam-sensitive processes where
+            probabilistic tools and “AI may be wrong” disclaimers are not deployable.
+          </p>
+
+          <h2 style="margin-top: 16px;">How it scales</h2>
+          <ul class="list">
+            <li><span class="dot"></span><span><strong>Wedge:</strong> Individual RIAs for production validation and early revenue.</span></li>
+            <li><span class="dot"></span><span><strong>Distribution:</strong> Aggregators, platforms, and compliance providers.</span></li>
+            <li><span class="dot"></span><span><strong>Scale:</strong> Embedded deployment with custodians and wealth platforms; one integration → broad downstream reach.</span></li>
+          </ul>
+
+          <p class="meta">
+            Founded by a former asset manager and Chief Compliance Officer with firsthand experience through multiple SEC exams,
+            including an AI-focused limited-scope exam.
+          </p>
+        </section>
+
+        <aside class="card cta">
+          <h2>Contact</h2>
+          <a class="btn" href="mailto:info@getkanika.com">
+            info@getkanika.com
+          </a>
+          <p class="meta">
+            If you’re reviewing Kanika as an investor or potential partner, email us and we’ll share additional context.
+          </p>
+        </aside>
+      </div>
+
+      <footer>
+        <div>© <span id="y"></span> Kanika Financial Technologies, Inc.</div>
+        <div><a href="mailto:info@getkanika.com">info@getkanika.com</a></div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
